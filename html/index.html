@@ -1,0 +1,69 @@
+<html>
+        <head>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+          <link rel="stylesheet" href="../css/design.css"/>
+          <script type="text/javascript" src="https://www.google.com/jsapi">
+          </script>
+          <script type="text/javascript">
+      
+            // Load the Google Transliterate API
+            google.load("elements", "1", {
+                  packages: "transliteration"
+
+                });
+      
+            function onLoad() {
+              
+              var options = {
+                  sourceLanguage:
+                      google.elements.transliteration.LanguageCode.ENGLISH,
+                  destinationLanguage:
+                      [google.elements.transliteration.LanguageCode.NEPALI],
+                  shortcutKey: 'ctrl+g',
+                  transliterationEnabled: true
+              };
+      
+              // Create an instance on TransliterationControl with the required
+              // options.
+              var control =
+                  new google.elements.transliteration.TransliterationControl(options);
+      
+              // Enable transliteration in the textbox with id
+              // 'transliterateTextarea'.
+        
+
+              control.makeTransliteratable(['transliterateTextarea']);
+              document.getElementById("transliterateTextarea").style.fontSize = "50px";
+            }
+            google.setOnLoadCallback(onLoad);
+
+         
+
+
+          </script>
+
+     
+        </head>
+        <body>
+
+
+          <div id="mainContainer">
+                    <textarea id="transliterateTextarea"></textarea>
+
+          </div> 
+
+       
+   <script>
+        var textArea=document.getElementById("transliterateTextarea")
+        textArea.placeholder="Write something in nepali wala english";
+
+        textArea.addEventListener('click',function(){
+          console.log("text area clicked");
+          textArea.style.color="#ffffff";
+
+        });
+        
+        </script>
+
+        </body>
+      </html> 

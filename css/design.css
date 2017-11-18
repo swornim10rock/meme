@@ -1,0 +1,43 @@
+body {background: rgb(0, 0, 0);}
+
+
+h2 {margin-left: 55px;}
+
+textarea {
+  margin-top: 10px;
+  margin-left: 50px;
+  overflow-y: hidden;
+  background: rgb(0, 0, 0);
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-top-colors: none;
+  font-size: 100px;
+  border-radius: 6px 6px 6px 6px;
+  border-style: none none none none;
+  border-width: medium 1px 1px medium;
+  color: #474545;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  line-height: 1.4em;
+  padding: 5px 8px;
+  resize: none;
+}
+
+
+#mainContainer{
+  position: absolute;
+  margin: auto;
+  width:500px;
+  height:auto;
+  top: 50%;
+  left:50%;
+
+  
+}
+
+
+textarea:focus {
+    outline-width: 0;
+}
+
+
